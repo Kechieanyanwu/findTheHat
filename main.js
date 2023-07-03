@@ -55,7 +55,7 @@ while (gameOver === false) {
             //check if new location is out of bounds
             if ((myField.playerX > 2) || (myField.playerY > 2) || (myField.playerX < 0) || (myField.playerY < 0)){
                 console.log("Out of bounds. Goodbye.");
-        
+                gameOver = true;
             } else {
                     let playerLocation = myField.field[myField.playerY][myField.playerX];
 
@@ -68,4 +68,5 @@ while (gameOver === false) {
                     }
                     myField.field[myField.playerY][myField.playerX] = '*'; //updates new player location
                     }
-            }}
+            }
+        }
